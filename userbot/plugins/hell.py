@@ -13,9 +13,9 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "LEGEND"
+DEFAULTUSER = ALIVE_NAME or "D3VIL"
 HELL_IMG = Config.ALIVE_PHOTTO
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "LEGEND"
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "D3VIL"
 
 USERID = bot.uid
 
@@ -65,7 +65,7 @@ async def amireallyalive(alive):
         hell_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         hell_caption += f"__**BOT STATUS**__\n\n"
         hell_caption += f"**★ Telethon version :** `1.15.0`\n"
-        hell_caption += f"**★ LEGEND VERSION :**`{legendversion}`\n"
+        hell_caption += f"**★ D3VIL VERSION :**`{d3vilversion}`\n"
         hell_caption += f"**★ Uptime :** `{uptime}\n`"
         hell_caption += f"**★ Master:** {mention}\n"
         await alive.client.send_file(
@@ -79,7 +79,7 @@ async def amireallyalive(alive):
             f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ \n"
             f"__**BOT STATUS**__\n\n"
             f"**★ Telethon Version :** `1.15.0`\n"
-            f"**★ LEGEND VERSION:** `{legendversion}`\n"
+            f"**★ D3VIL VERSION:** `{d3vilversion}`\n"
             f"**★ Uptime :** `{uptime}\n`"
             f"**★ Master:** {mention}\n",
         )
