@@ -1,17 +1,17 @@
-SAVAGE - 2
+D3VIL_BOT 🔥
 
 
 
 <p align="center">
 
-<img src="https://telegra.ph/file/ffa20fe7f7899e5e4e3b2.jpg">
+<img src="https://telegra.ph/file/7d8f46be9f19eb47cf5ef.jpg">
 
 -------------------------------------------------
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/sameerpanthi/SAVAGE-2.0?utm_source=github.com&utm_medium=referral&utm_content=sameerpanthi/SAVAGE-2.0&utm_campaign=Badge_Grade_Settings)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/sameerpanthi/D3VIL_BOT?utm_source=github.com&utm_medium=referral&utm_content=sameerpanthi/D3VIL_BOT&utm_campaign=Badge_Grade_Settings)
 [![Python 3.6](https://img.shields.io/badge/Python-3.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-360/)
-![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/SAVAGE-2.0)
-[![HitCount](http://hits.dwyl.com/sameerpanthi/SAVAGE-2.0.svg)](http://hits.dwyl.com/sameerpanthi/SAVAGE-20)
+![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/D3VIL_BOT)
+[![HitCount](http://hits.dwyl.com/sameerpanthi/D3VIL_BOT.svg)](http://hits.dwyl.com/sameerpanthi/D3VIL_BOT)
 [![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/sameer_795)
 
 -------------------------------------------------
@@ -27,21 +27,21 @@ SAVAGE - 2
 
 -------------------------------------------------
 
-匚尺乇卂ㄒㄖ尺 : [丂卂爪乇乇尺](https://t.me/SAMEER_795)
+匚尺乇卂ㄒㄖ尺 : [丂卂爪乇乇尺](https://t.me/D3VIL_SAMEER)
 
 -------------------------------------------------
 
 ## Join our Support Channel and Group regrading bug fixes
 
 <a href="@Savage_suppot"><img src="https://img.shields.io/badge/Join-SUPPORT%20GROUP-red.svg?logo=Telegram"></a>
-<a href="@friends795"><img src="https://img.shields.io/badge/Join-SOCIAL%20GROUP-red.svg?logo=Telegram"></a>
+<a href="@checkmate_00"><img src="https://img.shields.io/badge/Join-SOCIAL%20GROUP-red.svg?logo=Telegram"></a>
 <a href="@pagal795"><img src="https://img.shields.io/badge/Join-SOCIAL%20GROUP-red.svg?logo=Telegram"></a>
 
 -------------------------------------------------
 
 ## FOR DEPLOY BOT 
 
-[![DEPLOY TO HEROKU](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sameerpanthi/SAVAGE)
+[![DEPLOY TO HEROKU](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sameerpanthi/D3VIL_BOT)
 
 ------------------------------------------------
 
