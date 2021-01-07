@@ -7,7 +7,7 @@ D3VIL_BOT 🔥
 <img src="https://telegra.ph/file/7d8f46be9f19eb47cf5ef.jpg">
 
 -------------------------------------------------
-
+<img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/sameerpanthi/D3VIL_BOT?utm_source=github.com&utm_medium=referral&utm_content=sameerpanthi/D3VIL_BOT&utm_campaign=Badge_Grade_Settings)
 [![Python 3.6](https://img.shields.io/badge/Python-3.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-360/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/D3VIL_BOT)
