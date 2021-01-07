@@ -12,7 +12,7 @@ D3VIL_BOT 🔥
 [![Python 3.6](https://img.shields.io/badge/Python-3.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-360/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/D3VIL_BOT)
 [![HitCount](http://hits.dwyl.com/sameerpanthi/D3VIL_BOT.svg)](http://hits.dwyl.com/sameerpanthi/D3VIL_BOT)
-[![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/sameer_795)
+[![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/D3VIL_SAMEER)
 
 -------------------------------------------------
 
