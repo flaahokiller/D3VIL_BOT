@@ -22,7 +22,7 @@ D3VIL_BOT 🔥
 
 
 ## STATUS OF THIS BOTS 
-<p align="left"><a href="https://github.com/sameerpanthi/SAVAGE/network/members"><img src="https://img.shields.io/github/forks/sameerpanthi/SAVAGE?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE/stargazers"><img src="https://img.shields.io/github/stars/sameerpanthi/SAVAGE?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE"><img src="https://img.shields.io/github/last-commit/sameerpanthi/SAVAGE?style=plastic"></a>
+<p align="left"><a href="https://github.com/sameerpanthi/D3VIL_BOT/network/members"><img src="https://img.shields.io/github/forks/sameerpanthi/SAVAGE?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/D3VIL_BOT/stargazers"><img src="https://img.shields.io/github/stars/sameerpanthi/D3VIL_BOT?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/D3VIL_BOT"></a><p align="left"><a href="https://github.com/sameerpanthi/D3VIL_BOT"><img src="https://img.shields.io/github/last-commit/sameerpanthi/D3VIL_BOT?style=plastic"></a>
 
 
 -------------------------------------------------
