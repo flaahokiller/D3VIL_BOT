@@ -35,7 +35,8 @@ pm_caption += "➾ **𝐂𝐇𝐀𝐍𝐍𝐄𝐋  **  ➣ [𝐉𝐎𝐈𝐍](ht
 pm_caption += "➾ **𝐂𝐑𝐄𝐀𝐓𝐎𝐑** ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@D3VIL_SAMEER)\n" 
 
 pm_caption += " \n\n"
-pm_caption += "[✨ 𝔻𝔼ℙ𝕃𝕆𝕐 𝕐𝕆𝕌ℝ 𝔻3𝕍𝕀𝕃_𝔹𝕆𝕋 ✨](https://github.com/sameerpanthi/D3VIL_BOT)"
+pm_caption += "[✨REPO✨](https://github.com/sameerpanthi/D3VIL_BOT) 🔹 [📜License📜](https://github.com/sameerpanthi/D3VIL_BOT/blob/master/LICENSE)"
+
 
 
 @borg.on(admin_cmd(pattern=r"alive"))
