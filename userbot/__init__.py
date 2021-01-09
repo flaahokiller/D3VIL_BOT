@@ -10,7 +10,7 @@ from var import Var
 from .function import lxfunction as topfunc
 
 StartTime = time.time()
-Devilversion = "2.0" 
+devilversion = "2.0" 
 
 Lastupdate = time.time()
 
