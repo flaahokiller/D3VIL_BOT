@@ -10,7 +10,7 @@ from var import Var
 from .function import lxfunction as topfunc
 
 StartTime = time.time()
-legendversion = "2.0" 
+Devilversion = "2.0" 
 
 Lastupdate = time.time()
 
@@ -138,7 +138,7 @@ if bool(ENV):
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/sameerpanthi/SAVAGE.git")
+    "https://github.com/sameerpanthi/D3VIL_BOT.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
