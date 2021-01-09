@@ -17,7 +17,7 @@ from userbot.utils import admin_cmd, sudo_cmd
 from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND SAR"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "d3vil user"
 file = Config.ALIVE_PHOTTO
 global ghanti
 ghanti = borg.uid
