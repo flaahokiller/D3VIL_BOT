@@ -29,10 +29,9 @@ pm_caption = "__                   **🔥 𝐃𝟑𝐕𝐈𝐋_𝐁𝐎𝐓 🔥
 pm_caption += f"               __↼🄼🄰🅂🅃🄴🅁⇀__\n**      『[{DEFAULTUSER}](tg://user?id={ghanti})』**\n\n"
 pm_caption += "✘ ΔβØỮŦ Μ¥ Ş¥ŞŦ€Μ ✘\n\n"
 pm_caption += "➾ **𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍**  ➣ 𝟏.𝟏𝟕.𝟓\n"
-pm_caption += "➾ **𝐒𝐔𝐏𝐏𝐎𝐑𝐓 ** ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/SFcYi6LR-Sazusqf)\n"
-pm_caption += "➾ **𝐒𝐎𝐂𝐈𝐀𝐋  **  ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/VhpqUT83rKwiDnghqupK8w)\n"
-pm_caption += "➾ **𝐂𝐇𝐀𝐍𝐍𝐄𝐋  **  ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/WCEEeeCSq4mE5KWm)\n"
-pm_caption += "➾ **𝐂𝐑𝐄𝐀𝐓𝐎𝐑** ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@D3VIL_SAMEER)\n" 
+pm_caption += "➾ **𝐒𝐔𝐏𝐏𝐎𝐑𝐓 ** ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/SFcYi7S5MFEz2M17)\n"
+pm_caption += "➾ **𝐒𝐎𝐂𝐈𝐀𝐋  **  ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/PzesrNKQG0B4dPIj)\n"
+pm_caption += "➾ **𝐂𝐑𝐄𝐀𝐓𝐎𝐑** ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@SAMEER_795)\n" 
 
 pm_caption += " \n\n"
 pm_caption += "[✨REPO✨](https://github.com/sameerpanthi/D3VIL_BOT) 🔹 [📜License📜](https://github.com/sameerpanthi/D3VIL_BOT/blob/master/LICENSE)"
