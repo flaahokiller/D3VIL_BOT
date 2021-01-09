@@ -1,6 +1,6 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, d3vilversion
+from userbot import ALIVE_NAME, StartTime, devilversion
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
@@ -13,9 +13,9 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "D3VIL"
+DEFAULTUSER = ALIVE_NAME or "Devil"
 HELL_IMG = Config.ALIVE_PHOTTO
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "D3VIL"
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "Devil"
 
 USERID = bot.uid
 
@@ -53,8 +53,8 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="D3VIL$"))
-@bot.on(sudo_cmd(pattern="D3VIL$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="Devil$"))
+@bot.on(sudo_cmd(pattern="Devil$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
@@ -65,7 +65,7 @@ async def amireallyalive(alive):
         hell_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         hell_caption += f"__**BOT STATUS**__\n\n"
         hell_caption += f"**★ Telethon version :** `1.15.0`\n"
-        hell_caption += f"**★ D3VIL VERSION :**`{d3vilversion}`\n"
+        hell_caption += f"**★ DEVIL VERSION :**`{d3vilversion}`\n"
         hell_caption += f"**★ Uptime :** `{uptime}\n`"
         hell_caption += f"**★ Master:** {mention}\n"
         await alive.client.send_file(
