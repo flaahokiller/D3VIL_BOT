@@ -61,11 +61,11 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
 
     if HELL_IMG:
-        hell_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+        hell_caption = f"**{🔥 𝐃𝟑𝐕𝐈𝐋 BOT 🔥}**\n\n"
         hell_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         hell_caption += f"__**BOT STATUS**__\n\n"
         hell_caption += f"**★ Telethon version :** `1.15.0`\n"
-        hell_caption += f"**★ DEVIL VERSION :**`{devilversion}`\n"
+        hell_caption += f"**★ DEVIL VERSION : **`{devilversion}`\n"
         hell_caption += f"**★ Uptime :** `{uptime}\n`"
         hell_caption += f"**★ Master:** {mention}\n"
         await alive.client.send_file(
