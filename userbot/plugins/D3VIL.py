@@ -1,6 +1,6 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, legendversion
+from userbot import ALIVE_NAME, StartTime, d3vilversion
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
@@ -53,8 +53,8 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="hell$"))
-@bot.on(sudo_cmd(pattern="hell$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="D3VIL$"))
+@bot.on(sudo_cmd(pattern="D3VIL$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
