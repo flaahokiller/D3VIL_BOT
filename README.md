@@ -52,4 +52,4 @@ TAKE STRING FROM HERE -
 -------------------------------------------------
 CREIDT - 
 LEGEND BOT 
-<img src= "https://telegra.ph/file/1ef6764e84f7eb9e58c8d.jpg"
+<img src="https://telegra.ph/file/1ef6764e84f7eb9e58c8d.jpg"
