@@ -18,11 +18,11 @@ from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "d3vil user"
-file = Config.ALIVE_PHOTTO
 global ghanti
 ghanti = borg.uid
 
 """ =======================CONSTANTS====================== """
+file = "https://telegra.ph/file/91da5dbcfc27d2c024592.mp4"
 """ =======================CONSTANTS====================== """
 pm_caption = "__                   **🔥 𝐃𝟑𝐕𝐈𝐋_𝐁𝐎𝐓 🔥**  __\n\n"
 
