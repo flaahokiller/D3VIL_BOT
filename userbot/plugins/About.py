@@ -22,14 +22,14 @@ global ghanti
 ghanti = borg.uid
 
 """ =======================CONSTANTS====================== """
-file = "https://telegra.ph/file/8c063f847749e361620f3.jpg"
+file = "https://telegra.ph/file/1d2d9843831b38e0ba84b.mp4"
 """ =======================CONSTANTS====================== """
 pm_caption = "🔥🔥 𝐃𝟑𝐕𝐈𝐋_𝐁𝐎𝐓 𝐁𝐘 𝐃𝐄𝐕𝐈𝐋 𝐅𝐑𝐀𝐍𝐂𝐇𝐄𝐒𝐊𝐎𝐎🔥🔥  \n\n"
 
 pm_caption += f"               ↼🄼🅁.🄾🅆🄽🄴🅁⇀\n      『𝘿3𝙑𝙄𝙇 𝙁𝙍𝘼𝙉𝘾𝙃𝙀𝙎𝙆𝙊𝙊』\n\n"
 pm_caption += "✘ A͜͡B͜͡O͜͡U͜͡T͜͡ D͜͡3V͜͡I͜͡L͜͡ O͜͡W͜͡N͜͡E͜͡R͜͡  ✘\n\n"
 pm_caption += "➾ 𝐍𝐀𝐌𝐄 ➣ [𝐃3𝐕𝐈𝐋 𝐅𝐑𝐀𝐍.😎](@D3VIL_FRANCHESKOO)\n"
-pm_caption += "➾ 𝐇𝐎𝐁𝐁𝐈𝐄 ➣ [𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐌𝐄𝐍𝐓]()\n"
+pm_caption += "➾ 𝐇𝐎𝐁𝐁𝐈𝐄 ➣ [𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐌𝐄𝐍𝐓🌟](https://t.me/joinchat/SFcYi7S5MFEz2M17)\n"
 pm_caption += "➾ 𝐎𝐖𝐍𝐄𝐑 𝐎𝐅 ➣ [𝐃3𝐕𝐈𝐋 𝐓𝐄𝐀𝐌😈](https://t.me/joinchat/Vy3AoRuVMGxxDCcr)\n"
 pm_caption += "➾ 𝐎𝐖𝐍𝐄𝐑 𝐎𝐅 ➣ [𝐃3𝐌𝐁𝐋 𝐓𝐄𝐀𝐌😍](https://t.me/joinchat/TFLvsrk91e9Me9nV)\n"
 pm_caption += "➾ 𝐌𝐘 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ➣ [𝐃3𝐕𝐈𝐋 𝐁𝐎𝐓⚡](https://t.me/joinchat/SFcYi7S5MFEz2M17)\n" 
