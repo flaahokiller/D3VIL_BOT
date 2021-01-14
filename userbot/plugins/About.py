@@ -29,11 +29,12 @@ pm_caption = "**🔥🔥 𝐃𝟑𝐕𝐈𝐋_𝐁𝐎𝐓 𝐁𝐘 𝐃𝐄𝐕
 pm_caption += f"               ↼🅄🅁 🄳🄰🄳⇀\n      『𝘿3𝙑𝙄𝙇 𝙁𝙍𝘼𝙉𝘾𝙃𝙀𝙎𝙆𝙊𝙊』\n\n"
 pm_caption += "✘ A͜͡B͜͡O͜͡U͜͡T͜͡ D͜͡3V͜͡I͜͡L͜͡ O͜͡W͜͡N͜͡E͜͡R͜͡  ✘\n\n"
 pm_caption += "➾ 𝐍𝐀𝐌𝐄 ➣ [𝐃3𝐕𝐈𝐋 𝐅𝐑𝐀𝐍.😎](@D3VIL_FRANCHESKOO)\n"
-pm_caption += "➾ 𝐇𝐎𝐁𝐁𝐈𝐄 ➣ [𝐆 𝐌𝐀𝐑𝐍𝐀](https://t.me/joinchat/Q28jGPJHf9qb7gAP)\n"
+pm_caption += "➾ 𝐇𝐎𝐁𝐁𝐈𝐄 ➣ 𝐆. 𝐌𝐀𝐑𝐍A☠️\n"
 pm_caption += "➾ 𝐎𝐖𝐍𝐄𝐑  ➣ [𝐃3𝐕𝐈𝐋 𝐓𝐄𝐀𝐌😈](https://t.me/joinchat/Vy3AoRuVMGxxDCcr)\n"
 pm_caption += "➾ 𝐂𝐎-𝐎𝐖𝐍𝐄𝐑  ➣ [𝐌𝐁𝐋 𝐓𝐄𝐀𝐌😍](https://t.me/joinchat/TFLvsrk91e9Me9nV)\n"
 pm_caption += "➾ 𝐌𝐘 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ➣ [𝐃3𝐕𝐈𝐋 𝐁𝐎𝐓⚡](https://t.me/joinchat/SFcYi7S5MFEz2M17)\n" 
-
+pm_caption += " \n\n"
+pm_caption += "𝐒𝐏𝐄𝐂𝐈𝐀𝐋 𝐁𝐔𝐓𝐓𝐎𝐍 𝐅𝐎𝐑 𝐌𝐘 𝐇𝐀𝐓𝐄𝐑𝐒  ➣ [𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄](https://t.me/joinchat/Q28jGPJHf9qb7gAP)\n"
 pm_caption += " \n\n"
 pm_caption += "[✨𝐀𝐁𝐎𝐔𝐓 𝐃3𝐕𝐈𝐋 𝐎𝐖𝐍𝐄𝐑✨](https://t.me/ABOUT_D3VIL_FRANCHESKOO)"
 
