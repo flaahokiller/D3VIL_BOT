@@ -35,7 +35,7 @@ pm_caption += "➾ 𝐂𝐎-𝐎𝐖𝐍𝐄𝐑  ➣ [𝐌𝐁𝐋 𝐓𝐄𝐀
 pm_caption += "➾ 𝐌𝐘 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ➣ [𝐃3𝐕𝐈𝐋 𝐁𝐎𝐓⚡](https://t.me/joinchat/SFcYi7S5MFEz2M17)\n" 
 
 pm_caption += " \n\n"
-pm_caption += "[✨𝐀𝐁𝐎𝐔𝐓 𝐃3𝐕𝐈𝐋 𝐎𝐖𝐍𝐄𝐑✨](https://t.me/ABOUT_D3VIL_FRANCHESKOO)
+pm_caption += "[✨𝐀𝐁𝐎𝐔𝐓 𝐃3𝐕𝐈𝐋 𝐎𝐖𝐍𝐄𝐑✨](https://t.me/ABOUT_D3VIL_FRANCHESKOO)"
 
 
 @borg.on(admin_cmd(pattern=r"alive2"))
