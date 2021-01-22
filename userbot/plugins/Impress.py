@@ -32,3 +32,11 @@ async def _(event):
          
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
+
+CMD_HELP.update(
+    {
+        "Impress": "**Plugin : **`impress`\
+    \n\n**Syntax : **`.impress`\
+    \n**Function : **Impress Ur Crush By This Cmnd 😄.. Use At Ur Own Risk"
+    }
+        )
