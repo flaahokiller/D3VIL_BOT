@@ -83,3 +83,10 @@ async def amireallyalive(alive):
             f"**★ Uptime :** `{uptime}\n`"
             f"**★ Master:** {mention}\n",
         )
+CMD_HELP.update(
+    {
+        "allban": "**Plugin : **`Devil`\
+    \n\n**Syntax : **`.Devil`\
+    \n**Function : **about d3vil bot ... U can also check bot is alive or not by this command"
+    }
+)
