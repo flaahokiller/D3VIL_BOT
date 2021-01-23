@@ -53,8 +53,8 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="Devil$"))
-@bot.on(sudo_cmd(pattern="Devil$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="devil$"))
+@bot.on(sudo_cmd(pattern="devil$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
@@ -86,8 +86,8 @@ async def amireallyalive(alive):
 
     CMD_HELP.update(
     {
-        "Devil": "**Plugin : **`Devil`\
-    \n\n**Syntax : **`.Devil`\
+        "Devil": "**Plugin : **`devil`\
+    \n\n**Syntax : **`.devil`\
     \n**Function : **about d3vil bot ... U can also check bot is alive or not by this command"
     }
         )
