@@ -75,8 +75,8 @@ def user_full_name(user):
     return full_name
 
 
-@bot.on(admin_cmd(pattern="inviteall ?(.*)"))
-@bot.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="deviladder ?(.*)"))
+@bot.on(sudo_cmd(pattern="deviladder ?(.*)", allow_sudo=True))
 async def get_users(event):   
     sender = await event.get_sender() ; me = await event.client.get_me()
     if not sender.id == me.id:
