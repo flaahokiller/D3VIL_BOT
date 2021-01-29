@@ -29,8 +29,7 @@
  
 import asyncio
  
- 
-from telethon import CMD_HELP
+
  
  
 # By @sameer_795, 
