@@ -29,13 +29,12 @@
  
 import asyncio
  
-
+from userbot.utils import admin_cmd
  
  
 # By @sameer_795, 
  
- 
- 
+  
  
 @borg.on(admin_cmd(pattern="superfban ?(.*)"))
  
