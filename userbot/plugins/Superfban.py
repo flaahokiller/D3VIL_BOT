@@ -36,7 +36,8 @@ import asyncio
  
  
  
-@borg.on(admin_cmd("superfban ?(.*)"))
+ 
+@borg.on(admin_cmd(pattern="superfban ?(.*)"))
  
 async def _(event):
  
