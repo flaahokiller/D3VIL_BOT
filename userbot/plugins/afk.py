@@ -37,7 +37,7 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "😶__Back alive!__\n**No Longer afk.**\n `Was afk for:``"
+            "😶__Back alive!__\n**No Longer OFFLINE.**\n `Was OFFLINE for:``"
             + total_afk_time
             + "`",
         )
@@ -45,7 +45,7 @@ async def set_not_afk(event):
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\n"
-                + "😶__Back alive!__\n**No Longer afk.**\n `Was afk for:``"
+                + "😶__Back alive!__\n**No Longer OFFLINE.**\n `Was OFFLINE for:``"
                 + total_afk_time
                 + "`",
             )
@@ -117,7 +117,7 @@ async def on_afk(event):
         #           afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = (
-            f"Hey!! Suno mera sur ji .. abhi busy he ..wo bhot busy person he ... Aapke jese free nhi 😒😒... Dont disturb him ... U fursatiya not my master... He is offline . Since when?\n**For** `{total_afk_time}`\n"
+            f"Hey!! Suno mera sur ji .. abhi busy he ..wo bhot busy person he ... Aapke jese free nhi 😒😒... Dont disturb him ... U fursatiya not my master... He is offline . Since when ?\n\n**For** `{total_afk_time}`\n"
             + f"\n\n__CHALO HAMARE SUR JI REASON DEKHE GAYE HE DEKHLO . 🧐__ :-\n{reason}"
             if reason
             else f"**Heyy!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} .__\n\nWhen will I be back? Soon __Whenever I feel like coming back__🤧🚶🚶  "
