@@ -54,7 +54,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
                 + "for the proper functioning of afk functionality "
-                + "Ask In @teamishere Chat grp to get help..\n\n `{}`".format(str(e)),
+                + "Contact @sameeer_795 to get help..\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )
@@ -117,8 +117,8 @@ async def on_afk(event):
         #           afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = (
-            f"Hey!! My master is currently offline... Since when?\n**For** `{total_afk_time}`\n"
-            + f"\n\n__He/she left a reason BTW🧐__ :-\n{reason}"
+            f"Hey!! Suno mera sur ji .. abhi busy he ..wo bhot busy person he ... Aapke jese free nhi 😒😒... Dont disturb him ... U fursatiya not my master... He is offline . Since when?\n**For** `{total_afk_time}`\n"
+            + f"\n\n__CHALO HAMARE SUR JI REASON DEKHE GAYE HE DEKHLO . 🧐__ :-\n{reason}"
             if reason
             else f"**Heyy!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} .__\n\nWhen will I be back? Soon __Whenever I feel like coming back__🤧🚶🚶  "
         )
@@ -155,10 +155,10 @@ async def _(event):
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"__**I shall be Going afk because**__ ~ {reason}"
+                event.chat_id, f"__**I shall be Going OFFLINE because**__ ~ {reason}"
             )
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**")
+            await borg.send_message(event.chat_id, f"**I am Going OFFLINE !**")
         await asyncio.sleep(5)
         await event.delete()
         try:
