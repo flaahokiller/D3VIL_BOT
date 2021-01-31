@@ -13,7 +13,7 @@ from telethon import events, functions, __version__
 
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@teamishere"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "devil user"
 
 
 
