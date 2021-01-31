@@ -192,7 +192,7 @@ async def _(event):
 
 
 
-    await event.edit(plugin_syntax)helpable_plugins]
+    
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
     if len(modules) % number_of_cols == 1:
         pairs.append((modules[-1],))
