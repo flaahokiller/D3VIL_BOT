@@ -93,7 +93,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            danish = custom.Button.inline("◤✞ ໐pēຖ ๓คiຖ ๓ēຖนē คງคiຖ ◥", data="open")
+            danish = custom.Button.inline("◤ 𝐎𝐏𝐄𝐍 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 𝐀𝐆𝐀𝐈𝐍 ◥", data="open")
             await event.edit("`Main Menu Has Been Closed`", buttons=danish)
         else:
             reply_pop_up_alert = "Please get your own Userbot😁😁,for more detail contact @sameer_795! 😎😎"
@@ -129,29 +129,29 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
         reply_pop_up_alert = help_string
         reply_pop_up_alert += (
-            "\n\n __Click on buttons below to load or unload them..report us if you find any bug__\n\n **©LEGEND USERBOT**".format(plugin_name)
+            "\n\n __Click on buttons below to load or unload them..report us if you find any bug__\n\n **© 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓**".format(plugin_name)
         )
         try:
             if event.query.user_id == bot.uid :
-                dc = [custom.Button.inline("◀️ ᏰᎯᏣᏦ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
+                dc = [custom.Button.inline("◀️ ᏰᎯᏣᏦ",data="back({})".format(shivam)),custom.Button.inline(" 𝐂𝐋𝐎𝐒𝐄 ", data="close"),custom.Button.inline(" 𝐔𝐍𝐋𝐎𝐀𝐃 ",data="unload({})".format(shivam_sh1vam))]
                 await event.edit(reply_pop_up_alert, buttons=dc)
             else:
-                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehe
+                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info contact @sameer_795!"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#heh
         except: 
             if event.query.user_id == bot.uid :
-                sh1vam = [custom.Button.inline("◤✞ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ 𝕮𝖑𝖔𝖘𝖊 ✞◥", data="close")]
+                sh1vam = [custom.Button.inline("◤✞ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ 𝐂𝐋𝐎𝐒𝐄 ✞◥", data="close")]
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.edit(halps,buttons=sh1vam)
             else:
-                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
+                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info contact @sameer_795!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
               if event.query.user_id == bot.uid :
                     
-#  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 🇨 
+#  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 9
                     
                     try:
                         fcix = [custom.Button.inline(" ◀️ 𝐁𝐀𝐂𝐊 ",data="back({})".format(shivam)),custom.Button.inline(" ◀️ 𝐁𝐀𝐂𝐊 ", data="close"),custom.Button.inline("  𝐔𝐍𝐋𝐎𝐀𝐃 ",data="unload({})".format(shivam_sh1vam))]
