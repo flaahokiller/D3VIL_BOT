@@ -72,7 +72,7 @@ async def install(event):
                 os.remove(downloaded_file_name)
                 await eor(
                     event,
-                    "**Error!**\nPlugin cannot be installed!\n Or may have been pre-installed.",
+                    "**Error!**\nplugin phle se install he sur .. aapka dimaag kaha he ?",
                 )
         except Exception as e:  # pylint:disable=C0103,W0703
             await eor(event, str(e))
@@ -89,10 +89,10 @@ async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
         remove_plugin(shortname)
-        qwe = await eor(event, f"SAVAGE BOT Has Successfully unloaded {shortname}")
+        qwe = await eor(event, f"𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Has Successfully unloaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            "丂卂ᐯ卂Ꮆ乇 BOT has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
+            "𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
         )
 
 
@@ -111,5 +111,5 @@ async def load(event):
         qwe = await eor(event, f"Successfully loaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            f"丂卂ᐯ卂Ꮆ乇 could not load {shortname} because of the following error.\n{str(e)}"
+            f"𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 could not load {shortname} because of the following error.\n{str(e)}"
         )
