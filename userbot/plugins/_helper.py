@@ -5,7 +5,7 @@ from platform import uname
 import sys
 from telethon import events, functions, __version__
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "d3vil User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓"
 
 @command(pattern="^.help ?(.*)")
 #@borg.on(admin_cmd(pattern=r"help ?(.*)"))
@@ -29,7 +29,7 @@ async def cmd_list(event):
                         out_file,
                         force_document=True,
                         allow_cache=False,
-                        caption="**COMMANDS** In 𝐃𝟑𝐕𝐈𝐋 bot",
+                        caption="**COMMANDS** In 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓",
                         reply_to=reply_to_id
                     )
                     await event.delete()
@@ -73,7 +73,7 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""Telethon UserBot Powered by @D3VILIANS_BOT""")
+    await event.edit("""Telethon UserBot Powered 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓""")
 
 
 @borg.on(admin_cmd(pattern="syntax (.*)"))
@@ -84,7 +84,7 @@ async def _(event):
 
     if plugin_name in CMD_LIST:
         help_string = CMD_LIST[plugin_name].__doc__
-        unload_string = f"Use `.unload {plugin_name}` to remove this plugin.\n           @D3VILIANS_BOT"
+        unload_string = f"Use `.unload {plugin_name}` to remove this plugin.\n           𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓"
 
         if help_string:
             plugin_syntax = f"Syntax for plugin **{plugin_name}**:\n\n{help_string}\n{unload_string}"
