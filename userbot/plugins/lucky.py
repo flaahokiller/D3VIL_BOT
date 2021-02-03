@@ -49,7 +49,7 @@ async def _(event):
             "⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜",
             "⬜⬜⬜\n⬜⬜⬜\n⬜⬜⬜",
             "⬜⬜\n⬜⬜",
-            "[🎁👈🏻Ye le gift](https://t.me/hellbot_official)"
+            "[🎁👈🏻 Ye le gift](https://t.me/SAVAGE_TEAM_OP)"
 
  ]
 
