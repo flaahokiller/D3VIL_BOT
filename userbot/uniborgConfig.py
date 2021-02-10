@@ -14,14 +14,14 @@ if ENV:
         SUDO_COMMAND_HAND_LER = os.environ.get("SUDO_COMMAND_HAND_LER", r"\.")
         
         # This is required for the plugins involving the file system.
-        TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+        TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./download/")
         # This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
         IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
         IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
         # This is required for the hash to torrent file functionality to work.
         HASH_TO_TORRENT_API = os.environ.get("HASH_TO_TORRENT_API", "https://example.com/torrent/{}");
         # This is required for the @telegraph functionality.
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "IndianBot")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Modified")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)
@@ -35,6 +35,9 @@ if ENV:
         #spootifie
         SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
         SPOTIFY_PASS = os.environ.get("SPOTIFY_PASS", None)
+        
+        # bot nick name e.g modified without bot
+        botnickname = os.environ.get("BOT_NICK_NAME", None)
         SPOTIFY_BIO_PREFIX = os.environ.get("SPOTIFY_BIO_PREFIX", None)
         #log
         DUAL_LOG = os.environ.get("DUAL_LOG", None)
@@ -77,9 +80,14 @@ if ENV:
         if PRIVATE_GROUP_BOT_API_ID:
             PRIVATE_GROUP_BOT_API_ID = int(PRIVATE_GROUP_BOT_API_ID)
         # send .get_id in your private channel to forward all your Private messages
+        
+        TAG_LOGGER = os.environ.get("TAG_LOGGER", None)
+        if TAG_LOGGER: TAG_LOGGER = int(TAG_LOGGER)
+        
+        #Tag LOGGER
+        
         PM_LOGGR_BOT_API_ID = os.environ.get("PM_LOGGR_BOT_API_ID", None)
-        if PM_LOGGR_BOT_API_ID:
-            PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
+        if PM_LOGGR_BOT_API_ID: PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
         # For Databases
         # can be None in which case plugins requiring
         # DataBase would not work
@@ -92,10 +100,10 @@ if ENV:
         # number of colums of buttons to be displayed in .help command
         NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD = int(os.environ.get("NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD", 3))
         # emoji to be displayed  in help .help
-        EMOJI_TO_DISPLAY_IN_HELP = os.environ.get("EMOJI_TO_DISPLAY_IN_HELP", "🔰")
+        EMOJI_TO_DISPLAY_IN_HELP = os.environ.get("EMOJI_TO_DISPLAY_IN_HELP", "⚜️")
         # specify command handler that should be used for the plugins
         # this should be a valid "regex" pattern
-        COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", "\.")
+        COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r"\.")
         # specify list of users allowed to use bot
         # WARNING: be careful who you grant access to your bot.
         # malicious users could do ".exec rm -rf /*"
@@ -120,14 +128,13 @@ if ENV:
             t_file = open(TMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
             t_file.write(AUTH_TOKEN_DATA)
             t_file.close()
+        CUSTOM_STICKER_PACK_NAME = os.environ.get("CUSTOM_STICKER_PACK_NAME", None)
         YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
         GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
         #MongoDB
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #alive
-        ALIVE_PHOTTO = os.environ.get(
-        "ALIVE_PHOTTO", "https://telegra.ph/file/60c16f8f827b8e0929d3d.mp4"
-    )
+        ALIVE_PHOTTO = os.environ.get("ALIVE_PHOTTO", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         #auto bio
         BIO_MSG = os.environ.get("BIO_MSG", None)
@@ -135,19 +142,17 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/sameerpanthi/SAVAGE"
+            "UPSTREAM_REPO", "https://github.com/legendx22/LEGEND-BOT"
         )
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
-        #ASSISTANT
-        ASSISTANT_LOG = int(os.environ.get("ASSISTANT_LOG", False))
-        ENABLE_ASSISTANTBOT = os.environ.get("ENABLE_ASSISTANTBOT", "ENABLE")
-        ASSISTANT_START_PIC = os.environ.get(
-        "ASSISTANT_START_PIC",
-        "https://www.logolynx.com/images/logolynx/72/7257d2ac93b97c8a2c7308266052df13.png",
-        )
-        BOT_HANDLER = os.environ.get("BOT_HANDLER", "^/")
-
+   # Deepai value can get from https://deepai.org/
+        DEEP_AI = os.environ.get("DEEP_AI", None)
+      #SUPERFEDBAN
+        FBAN_GROUP_ID = os.environ.get("FBAN_GROUP_ID", None)
+        if FBAN_GROUP_ID:
+            FBAN_GROUP_ID = int(FBAN_GROUP_ID)
+        EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
+        FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False))
 else:
     class Config(object):
         DB_URI = None
-       
