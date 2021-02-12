@@ -1,200 +1,230 @@
+#modify by legendx22
+#credits team dc
+#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
+#A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
+#Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
+# aur  unload load back close open kang kara ya idea bhi le to credit dena pehli 6 line nahi to bhut bura hoga tumara sath
 from math import ceil
-from re import compile
-
-from telethon.events import InlineQuery, callbackquery
-from telethon.sync import custom
-from telethon.tl.functions.channels import JoinChannelRequest
-
-from userbot import *
-from userbot.cmdhelp import *
-from userbot.utils import *
-
-# thats how a lazy guy imports
-# devilbot
-
-def button(page, modules):
-    Row = 7
-    Column = 3
-
-    modules = sorted([modul for modul in modules if not modul.startswith("_")])
-    pairs = list(map(list, zip(modules[::2], modules[1::2])))
-    if len(modules) % 2 == 1:
-        pairs.append([modules[-1]])
-    max_pages = ceil(len(pairs) / Row)
-    pairs = [pairs[i : i + Row] for i in range(0, len(pairs), Row)]
-    buttons = []
-    for pairs in pairs[page]:
-        buttons.append(
-            [
-                custom.Button.inline("🔸 " + pair, data=f"Information[{page}]({pair})")
-                for pair in pairs
-            ]
-        )
-
-    buttons.append(
-        [
-            custom.Button.inline(
-                "◀️ ᏰᎯᏣᏦ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
-            ),
-            custom.Button.inline(
-              "• ❌ •", data="close"
-            ),
-            custom.Button.inline(
-                "ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
-            ),
-        ]
-    )
-    return [max_pages, buttons]
-    # Changing this line may give error in bot as i added some special cmds in 𝐃𝐄𝐕𝐈𝐋 𝐁𝐎𝐓 channel to get this module work...
-
-    modules = CMD_HELP
+import asyncio
+import json
+import random
+import os,re
+import urllib
+from telethon.tl.custom import Button 
+from telethon import events, errors, custom, functions
+from userbot import CMD_LIST, CMD_HELP
+import io
+#ABEE O KANGAR  BACK OPEN CLSE BTN KANG KIYA TO YE LONE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 gaja diff name and manipulation se imported hai 
+#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
+from userbot.utils import remove_plugin,load_module
+#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
+#A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
+#Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
-    @tgbot.on(InlineQuery)  # pylint:disable=E0602
+
+# 🇦 🇦 🇵     🇾 🇦 🇭 🇦    🇦 🇦 🇾 🇪    🇰 🇮 🇸     🇱 🇮 🇾 🇪 ??
+
+# 🇨 🇭 🇦 🇱 🇴      🇸 🇮 🇷    🇵 🇱 🇪 🇦 🇸 🇪    🇬 🇪 🇹 🇴 🇺 🇹    
+
+
+
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"open")))
+   
+    async def opner(event):
+            if event.query.user_id == bot.uid :
+                current_page_number=0
+                dc = paginate_help(current_page_number, CMD_LIST, "helpme")
+                await event.edit(">>>\n\nReopened The Main Menu of \n©𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ", buttons=dc)
+            else:
+                reply_pop_up_alert = "Please get your own Userbot,for more detail contact @sameer_795!"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+       
+  #       🇮 🇹 🇳 🇦    🇰 🇾 🇺   🇸 🇵 🇾     🇰 🇷    🇷 🇭 🇪     🇭 🇴      🇸 🇭 🇦 🇦 🇩 🇮    🇰 🇷 🇳 🇮    🇭    🇰 🇾 🇦   🇧 🇸 🇩 🇰 
+
+    @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@D3VILIANS_BOT":
+        if event.query.user_id == bot.uid and query.startswith("Userbot"):
             rev_text = query[::-1]
-            veriler = button(0, sorted(CMD_HELP))
-            result = await builder.article(
-                f"Hey! Only use .help please",
-                text=f"**Running DevilUserBot**\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
-                buttons=veriler[1],
-                link_preview=False,
-            )
-        elif query.startswith("http"):
-            part = query.split(" ")
-            result = builder.article(
-                "File uploaded",
-                text=f"**File uploaded successfully to {part[2]} site.\n\nUpload Time : {part[1][:3]} second\n[‏‏‎ ‎]({part[0]})",
-                buttons=[[custom.Button.url("URL", part[0])]],
-                link_preview=True,
-            )
+            dc = paginate_help(0, CMD_LIST, "helpme")
+            result = builder.article("© 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Userbot Help",text="{}\nCurrently Loaded Plugins: {}".format(query, len(CMD_LIST)),buttons=dc,link_preview=False)
+            await event.answer([result] if result else None)
         else:
-            result = builder.article(
-                "@D3VILIANS_BOT",
-                text="""**Hey! This is [Dévílẞø†.](https://t.me/D3VILIANS_BOT) \nYou can know more about me from the links given below 👇**""",
-                buttons=[
-                    [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/DevilUserBot"),
-                        custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/savage_pagapanti"
-                        ),
-                    ],
-                    [
-                        custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/sameerpanthi/d3vil_bot"),
-                        custom.Button.url
-                    (
-                            "🔰 TUTORIAL 🔰", "https://t.me/D3VILIANS_BOT"
-                    )
-                    ],
-                ],
-                link_preview=False,
-            )
-        await event.answer([result] if result else None)
+              reply_pop_up_alert = "Please get your own Userbot😁😁,for more detail contact @sameer_795! 😎😎"
+              await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+    @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+        data=re.compile(b"helpme_next\((.+?)\)")
+    ))#hehe
+    async def on_plug_in_callback_query_handler(event):
+        if event.query.user_id == bot.uid:  # pylint:disable=E0602
+            current_page_number = int(
+                event.data_match.group(1).decode("UTF-8"))
+            
+            dc = paginate_help(
+                current_page_number + 1, CMD_LIST, "helpme")
+          
+            await event.edit(buttons=dc)
+        else:
+            Cobra = "Please get your own Userbot, and don't use mine for more details contact @sameer_795!"
+            await event.answer(Cobra, cache_time=0, alert=True)
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
-    async def page(event):
-        if not event.query.user_id == bot.uid:
-            return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © 𝐃3𝐕𝐈𝐋 𝐁𝐎𝐓 ™",
-                cache_time=0,
-                alert=True,
+@tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+        data=re.compile(b"helpme_prev\((.+?)\)")
+    ))
+    async def on_plug_in_callback_query_handler(event):
+        if event.query.user_id == bot.uid:  # pylint:disable=E0602
+            current_page_number = int(
+                event.data_match.group(1).decode("UTF-8"))
+            
+            dc = paginate_help(
+                current_page_number - 1,
+                CMD_LIST,  # pylint:disable=E0602
+                "helpme"
             )
-        page = int(event.data_match.group(1).decode("UTF-8"))
-        veriler = button(page, CMD_HELP)
-        await event.edit(
-            f"**Legenday AF** [D3vílẞøt](https://t.me/D3VILIANS_BOT) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
-            buttons=veriler[1],
-            link_preview=False,
-        )
-        
+            
+            await event.edit(buttons=dc)
+        else:
+              Thelegend = "Please get your own Userbot😁😁,for more details contact @sameer_795! 😎😎"
+              await event.answer(Thelegend, cache_time=0, alert=True)
+ #hehehehehhehhehhehe   
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            await event.edit(
-                "⚜️𝐃𝐄𝐕𝐈𝐋 𝐁𝐎𝐓 Menu Provider Is now Closed⚜️\n\n      © 𝐃𝐄𝐕𝐈𝐋 𝐁𝐎𝐓 ™"
-            )
-          
-    @tgbot.on(
-        callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
-    )
-    async def Information(event):
-        if not event.query.user_id == bot.uid:
-            return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © 𝐃𝐄𝐕𝐈𝐋 𝐁𝐎𝐓 ™",
-                cache_time=0,
-                alert=True,
-            )
+            danish = custom.Button.inline("◤ 𝐎𝐏𝐄𝐍 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 𝐀𝐆𝐀𝐈𝐍 ◥", data="open")
+            await event.edit("Main Menu Has Been Closed", buttons=danish)
+        else:
+            reply_pop_up_alert = "Please get your own Userbot😁😁,for more detail contact @sameer_795! 😎😎"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+   
 
-        page = int(event.data_match.group(1).decode("UTF-8"))
-        commands = event.data_match.group(2).decode("UTF-8")
+  
+    @tgbot.on(
+        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+            data=re.compile(b"us_plugin_(.*)")
+        )
+    )
+    async def on_plug_in_callback_query_handler(event):
+        if not event.query.user_id == bot.uid:
+            atul= "Please get your own Userbot😁😁,for more details contact @sameer_795! 😎😎"
+            await event.answer(atul, cache_time=0, alert=True)
+            return
+        plugin_name = event.data_match.group(1).decode("UTF-8")
+        global shivam_sh1vam
+        shivam_sh1vam="{}".format(plugin_name)
+        help_string = "Commands found in {}:\n".format(plugin_name)
+        k = "💠⚡💎"
+        u = 0
+        for i in CMD_LIST[plugin_name]:
+            u += 1
+            help_string += str(k[u % 3]) + " " + i + "\n\n"
+        if plugin_name in CMD_HELP:
+            help_string += (
+                f"📤 PLUGIN NAME 📤 : {plugin_name} \n\n{CMD_HELP[plugin_name]}"
+            )
+        else:
+            help_string += "❌"
+
+        reply_pop_up_alert = help_string
+        reply_pop_up_alert += (
+            "\n\n Click on buttons below to load or unload them..report us if you find any bug\n\n © 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓".format(plugin_name)
+        )
         try:
-            buttons = [
-                custom.Button.inline(
-                    "🔹 " + cmd[0], data=f"commands[{commands}[{page}]]({cmd[0]})"
-                )
-                for cmd in CMD_HELP_BOT[commands]["commands"].items()
-            ]
-        except KeyError:
-            return await event.answer(
-                "No Description is written for this plugin", cache_time=0, alert=True
-            )
-
-        buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline("◀️ ᏰᎯᏣᏦ", data=f"page({page})")])
-        await event.edit(
-            f"**📗 File:** `{commands}`\n**🔢 Number of commands :** `{len(CMD_HELP_BOT[commands]['commands'])}`",
-            buttons=buttons,
-            link_preview=False,
-        )
-
-    @tgbot.on(
-        callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)"))
-    )
-    async def commands(event):
-        if not event.query.user_id == bot.uid:
-            return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © 𝐃𝐄𝐕𝐈𝐋 𝐁𝐎𝐓 ™",
-                cache_time=0,
-                alert=True,
-            )
-
-        cmd = event.data_match.group(1).decode("UTF-8")
-        page = int(event.data_match.group(2).decode("UTF-8"))
-        commands = event.data_match.group(3).decode("UTF-8")
-
-        result = f"**📗 File:** `{cmd}`\n"
-        if CMD_HELP_BOT[cmd]["info"]["info"] == "":
-            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**⬇️ Official:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-                result += f"**⚠️ Warning :** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
+            if event.query.user_id == bot.uid :
+                dc = [custom.Button.inline("◀️ ᏰᎯᏣᏦ",data="back({})".format(shivam)),custom.Button.inline(" 𝐂𝐋𝐎𝐒𝐄 ", data="close"),custom.Button.inline(" 𝐔𝐍𝐋𝐎𝐀𝐃 ",data="unload({})".format(shivam_sh1vam))]
+                await event.edit(reply_pop_up_alert, buttons=dc)
             else:
-                result += f"**⬇️ Official:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
-        else:
-            result += f"**⬇️ Official:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**⚠️ Warning:** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
-            result += f"**ℹ️ Info:** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info contact @sameer_795!"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#heh
+        except: 
+            if event.query.user_id == bot.uid :
+                sh1vam = [custom.Button.inline("◤✞ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ 𝐂𝐋𝐎𝐒𝐄 ✞◥", data="close")]
+                halps = "Do .help {} to get the list of commands.".format(plugin_name)
+                await event.edit(halps,buttons=sh1vam)
+            else:
+                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info contact @sameer_795!"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
 
-        command = CMD_HELP_BOT[cmd]["commands"][commands]
-        if command["params"] is None:
-            result += f"**🛠 commands:** `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
-        else:
-            result += f"**🛠 commands:** `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
+def paginate_help(page_number, loaded_plugins, prefix):
+    number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
+    number_of_cols = Config.NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD
+    multi = Config.EMOJI_TO_DISPLAY_IN_HELP
+    helpable_plugins = []
+    for p in loaded_plugins:
+        if not p.startswith("_"):
+            helpable_plugins.append(p)
+    helpable_plugins = sorted(helpable_plugins)
+    modules = [custom.Button.inline(
+        "{} {}".format(random.choice(list(multi)), x),
+        data="us_plugin_{}".format(x))
+        for x in helpable_plugins]
+    pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
+    if len(modules) % number_of_cols == 1:
+        pairs.append((modules[-1],))
+    max_num_pages = ceil(len(pairs) / number_of_rows)
+    global shivam
+    modulo_page = page_number % max_num_pages
+    shivam=modulo_page
+    if len(pairs) > number_of_rows:
+        pairs = pairs[modulo_page * number_of_rows:number_of_rows * (modulo_page + 1)] + \
+            [
+            (custom.Button.inline("◀️ ᏰᎯᏣᏦ", data="{}_prev({})".format(prefix, modulo_page)),
+             custom.Button.inline("❌", data="close"),
+             custom.Button.inline("ᏁᏋﾒᎿ ▶️", data="{}_next({})".format(prefix, modulo_page)))
+        ]
+    return pairs
 
-        if command["example"] is None:
-            result += f"**💬 Explanation:** `{command['usage']}`\n\n"
-        else:
-            result += f"**💬 Explanation:** `{command['usage']}`\n"
-            result += f"**⌨️ For Example:** `{COMMAND_HAND_LER[:1]}{command['example']}`\n\n"
+# chal nikal 
+# gtfo
+# SED aagye aap😂
 
-        await event.edit(
-            result,
-            buttons=[
-                custom.Button.inline("◀️ ᏰᎯᏣᏦ", data=f"Information[{page}]({cmd})")
-            ],
-            link_preview=False,
-        )
+async def on_plug_in_callback_query_handler(event):
+              if event.query.user_id == bot.uid :
+                    
+#  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 9
+                    
+                    try:
+                        fcix = [custom.Button.inline(" ◀️ 𝐁𝐀𝐂𝐊 ",data="back({})".format(shivam)),custom.Button.inline(" ◀️ 𝐁𝐀𝐂𝐊 ", data="close"),custom.Button.inline("  𝐔𝐍𝐋𝐎𝐀𝐃 ",data="unload({})".format(shivam_sh1vam))]
+                        load_module(event.data_match.group(1).decode("UTF-8"))# kyu sir kang krne m musil aa rhi h kya ... Bolo help kr du kya 😂😂😂
+                        await event.edit( "Your DEVIL USERBOT Has Successfully loaded >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+                    except Exception as e:
+                        await event.edit("Error{}".format(shortname, str(e))+ "𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Has Successfully loaded" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+              else:
+                    shortname = event.data_match.group(1).decode("UTF-8")
+                    fcix = [custom.Button.inline("  ◀️ 𝐁𝐀𝐂𝐊 ",data="back({})".format(shivam)),custom.Button.inline(" 𝐂𝐋𝐎𝐒𝐄 ", data="close"),custom.Button.inline("𝐔𝐍𝐋𝐎𝐀𝐃",data="unload({})".format(shivam_sh1vam))]
+                    reply_pop_up_alert = "Please get your own Userbot,for more details contact @sameer_795!"
+                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
+   
+    async def on_plug_in_callback_query_handler(event):
+              if event.query.user_id == bot.uid :
+                    
+                    
+                    try:
+                        fcix = [custom.Button.inline(" ◀️ 𝐁𝐀𝐂𝐊 ",data="back({})".format(shivam)),custom.Button.inline(" 𝐂𝐋𝐎𝐒𝐄 ", data="close"),custom.Button.inline(" 𝐋𝐎𝐀𝐃 ",data="load({})".format(shivam_sh1vam))]
+                        remove_plugin(event.data_match.group(1).decode("UTF-8"))#kyu sir kang krne m muskil ho rhi h kya bologe toh help krdu 😂 
+                        await event.edit( "Your 𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 Has Successfully unloaded >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+                    except Exception as e:
+                        await event.edit("Error{}".format(shortname, str(e)) +"LEGENDBOT Has Successfully unloaded"+ str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+              else:
+                    shortname = event.data_match.group(1).decode("UTF-8")
+                    fcix = [custom.Button.inline("  ◀️ 𝐁𝐀𝐂𝐊 ",data="back({})".format(shivam)),custom.Button.inline(" 𝐂𝐋𝐎𝐒𝐄 ", data="close"),custom.Button.inline(" 𝐋𝐎𝐀𝐃 ",data="load({})".format(shivam_sh1vam))]
+                    reply_pop_up_alert = "Please get your own Userbot,for more info CONTACT @sameer_795!"
+                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehehe
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))
+   
+    async def on_plug_in_callback_query_handler(event):
+            
+            if event.query.user_id == bot.uid :
+                try:
+                    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+                    buttons = paginate_help(current_page_number-2, CMD_HELP, "helpme")
+                    await event.edit(">>> Here Is The Main Menu of\n\n©𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓", buttons=buttons)
+                except:
+                    buttons = paginate_help(0, CMD_HELP, "helpme")
+                    await event.edit(">>> Here Is The Main Menu Of\n\n©𝐃𝟑𝐕𝐈𝐋 𝐔𝐒𝐄𝐑𝐁𝐎𝐓", buttons=buttons)
+            else:
+                reply_pop_up_alert = "Please get your own Userbot,for more info contact @sameer_795!"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
