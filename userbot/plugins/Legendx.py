@@ -427,17 +427,13 @@ def paginate_help(page_number, loaded_plugins, prefix):
     shivam=modulo_page
  
     if len(pairs) > number_of_rows:
- 
-pairs = pairs[modulo_page * number_of_rows:number_of_rows * (modulo_page + 1)] + \
- 
-            [
- 
-            (custom.Button.inline("âï¸ á°á¯á£á¦", data="{}_prev({})".format(prefix, modulo_page)),
+        pairs = pairs[modulo_page * number_of_rows:number_of_rows * (modulo_page + 1)] + \
+             [
+             (custom.Button.inline("âï¸ á°á¯á£á¦", data="{}_prev({})".format(prefix, modulo_page)),
  
              custom.Button.inline("â", data="close"),
  
-             custom.Button.inline("ááï¾á¿ â¶ï¸", data="{}_next({})".format(prefix, modulo_page)))
- 
+             custom.Button.inline("ááï¾á¿ â¶ï¸", data="{}_next({})".format(prefix, modulo_page))) 
         ]
  
     return pairs
