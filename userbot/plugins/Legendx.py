@@ -89,7 +89,7 @@ async def on_plug_in_callback_query_handler(event):
               Thelegend = "Please get your own Userbot😁😁,for more details contact @sameer_795! 😎😎"
               await event.answer(Thelegend, cache_time=0, alert=True)
  #hehehehehhehhehhehe   
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             danish = custom.Button.inline("◤ 𝐎𝐏𝐄𝐍 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 𝐀𝐆𝐀𝐈𝐍 ◥", data="open")
