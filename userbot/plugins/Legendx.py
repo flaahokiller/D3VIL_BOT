@@ -73,7 +73,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_prev\((.+?)\)")
     ))
-    async def on_plug_in_callback_query_handler(event):
+async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:  # pylint:disable=E0602
             current_page_number = int(
                 event.data_match.group(1).decode("UTF-8"))
