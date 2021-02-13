@@ -90,7 +90,7 @@ async def on_plug_in_callback_query_handler(event):
               await event.answer(Thelegend, cache_time=0, alert=True)
  #hehehehehhehhehhehe   
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
-    async def on_plug_in_callback_query_handler(event):
+async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             danish = custom.Button.inline("◤ 𝐎𝐏𝐄𝐍 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 𝐀𝐆𝐀𝐈𝐍 ◥", data="open")
             await event.edit("Main Menu Has Been Closed", buttons=danish)
@@ -100,7 +100,7 @@ async def on_plug_in_callback_query_handler(event):
    
 
   
-    @tgbot.on(
+@tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(b"us_plugin_(.*)")
         )
