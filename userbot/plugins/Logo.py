@@ -97,7 +97,7 @@ async def slogo(event):
  
     text = event.pattern_match.group(2)
  
-    img = Image.open('./20201125_094030 (1).jpg')
+    img = Image.open('20201125_094030 (1).jpg')
  
     draw = ImageDraw.Draw(img)
  
@@ -109,7 +109,7 @@ async def slogo(event):
  
     shadowcolor = "black"
  
-    font = ImageFont.truetype("./Vermin Vibes V.otf", 300)
+    font = ImageFont.truetype("Vermin Vibes V.otf", 300)
  
     w, h = draw.textsize(text, font=font)
  
